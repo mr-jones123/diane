@@ -1,94 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diane, can I?</title>
-
-    <style>
-        body{
-            background-color: pink;
-            scrollbar-color: pink;
-
-        }
-        button {
-            padding: 10px 30px;
-            font-size: 20px; 
-            font-family: 'JetBrains Mono', monospace;
-            margin-top: 10px;
-            border-radius: 25px;
-            cursor: pointer;
-        }
-        button:hover{
-            background-color: black;
-            color: white;
-        }
-        .container{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;    
-            height: 100vh;
-            font-size: large;
-            font-weight: bold;
-            font-family: 'JetBrains Mono', monospace ;
-        }
-    </style>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <audio autoplay>
-        <source src="Space Song.mp3" type="audio/mp3">
+        <source src="Space Song.mp3" type="audio/mp3" />
     </audio>
-    
-    <div class="container">
-        <p>Hi... these days have been tiring, noh?</p>
-        <button onclick="responseYeah()">Yeah</button>
+    <h1>Diane and Me</h1>
+    <div class ="gallery">
+        <a href = "firstdate.html">
+            <img src = "first.jpg" alt = "Our First Picture" width = "500" height = "400">
+        </a>
+        <div class="desc">Our First Date</div>
     </div>
-
-    <script>
-        const container = document.querySelector('.container');
-
-        function responseYeah() {
-            container.innerHTML = '<p>I am always tired nowadays. You\'re always tired, ren.</p>' +
-                                    '<button onclick="responseThanks()">I know</button>';
-        }
-
-        function responseThanks() {
-            container.innerHTML = '<p>But know that I always do my best for you. Because I like you.</p>' +
-                                    '<button onclick="responseWhatDoYouMean()">Thank youuuu</button>';
-        }
-
-        function responseWhatDoYouMean() {
-            container.innerHTML = '<p>I don\'t want us to be stuck like this.</p>' +
-                                    '<button onclick="responseByWhat()">What do you mean??</button>';
-        }
-
-        function responseByWhat() {
-            container.innerHTML = '<p>Cycle of dating but busy and tired. I want to assure you that I will be consistent by...</p>' +
-                                    '<button onclick="responseCourt()">By what??</button>';
-        }
-
-        function responseCourt() {
-            container.innerHTML = '<p>By... asking if I can court you??</p>' +
-                                    '<button onclick="responseReally()">Really??!</button>'   
-        }
-
-        function responseReally() {
-            container.innerHTML = '<p>Yes. I have made up my mind. I want you.</p>'+
-                                   '<p>And I need you. I want you to know me while I court you.</p>' +
-                                   '<button onclick="responseNext()">Next</button>'
-        }
-        function responseNext(){
-            container.innerHTML = '<p>Geli Baves Diane Dalena. Do you wanna be courted?</p>'+
-                                     '<button onclick="responseYes()">Yes</button>' +
-                                     '<button onclick="responseNo()">No</button>'
-        }
-        function responseYes() {
-            container.innerHTML = '<p>YAAY eto flower para sayo🌷</p>';
-        }
-        function responseNo() {
-            container.innerHTML = '<p>:< I understand.</p>';
-        }
-    </script>
-</body>
+  </body>
 </html>
