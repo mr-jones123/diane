@@ -1,21 +1,51 @@
+:root{
+    --cherryblossompink : #EDAFB8;
+    --champagnepink : #F7E1D7;
+    --mossgreen :#8E8358;
+    --aquamarine: #A9F0D1;
+    --black : #020100;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+.gallery {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
 body{
-    background-color: pink;
-    scrollbar-color: pink;
+    background-color: var(--cherryblossompink);
+    scrollbar-color: var(--cherryblossompink);
 
 }
 h1{
-
-    font-family: 'JetBrains Mono',monospace;
-    margin-left: 700px;
+  text-align: center;
+  font-family: 'Inter';  
+  margin-top: 20px;
 
 }
+div.header img{
+    position: absolute;
+    height: 60px;
+    margin-left: 555px;
+}
 div.gallery{
-    background-color: black;
-    margin: 50px;
+    background-color: var(--champagnepink);
     border: 2px solid #000000;
     float: left;
     text-align: center;
     transition: 0.7s;
+    margin-left: 120px;
+    margin-top: 70px;
 }
 
 div.gallery img{
@@ -24,21 +54,19 @@ div.gallery img{
 }
 
 div.desc{
-    color: white;
+    color: var(--black);
     margin-top: 10px;
     margin-bottom: 20px;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Inter';
     font-size: 20px;
     font-style: bold;  
     font-weight: 600;
     letter-spacing: 1.5px;
 }
-
 div.gallery:hover{
     transform:scale(1.1);
     cursor: pointer;
-    box-shadow: 30px 10px green,  50px 25px black;
-
+    box-shadow: 30px 10px var(--mossgreen),  50px 25px var(--black);
 }
 
 div#firstDate img{
@@ -53,31 +81,51 @@ div#firstDate img:hover{
     transform:scale(1.1);
     cursor: pointer;
 }
+div#secondDate{
+    display: flex;
+    gap: 20px;
+    
+}
+div#secondDate img[src=".\\img\\secondDate(1).jpg"]{
+    margin-top: 20px;
+    margin-left: 60px;
+    border:3px solid var(--black);
+    transition: 0.7s;
+}
+div#secondDate img[src=".\\img\\secondDate.jpg"]{
+    margin-left: 450px;
+    margin-top: 100px;
+    border:3px solid var(--black);
+    transition: 0.7s;
+}
+div#secondDate img:hover{
+    transform:scale(1.1);
+    cursor: pointer;
+}
 
-.btn{
-    position: absolute;
-    background: transparent;
-    border: none;
-    font-size: 50px;
-    color: gray;
-    cursor: pointer;  
-    transition:0.6s;  
+div#robloxDate{
+    display: flex;
+    justify-content: center;
+    gap:20px
 }
-.btn:hover{
-   cursor: pointer;
+div#robloxDate img{
+    margin-top: 20px;
+    border: 2px solid var(--black);
+    transition: 0.7s;
 }
-a{
-    text-decoration: none;
-    color: inherit;
+div#robloxDate img:hover{
+    transform:scale(1.1);
+    cursor: pointer;
 }
 .btn-back{
     display: flex;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Inter';
+    font-size: 21px;
     font-style: bold;
     background: transparent;
     color: white;
-    border-color: white;
-    margin-top: 120px;
+    border:3px solid white;
+    margin-top: 50px;
     margin-left: 1100px;
     padding: 20px;
     transition: 0.7s;
@@ -88,16 +136,18 @@ a{
     color: black;
     cursor: pointer;
     transform: scale(1.1);
-    box-shadow: 10px 10px gray ;
+    box-shadow: 10px 10px var(--cherryblossompink) ;
     text-decoration: none;
 }
-div#textBox{
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 30px;
+div.textBox{
+    font-family: 'Inter';
+    font-weight: lighter;
+    font-size: 25px;
     padding: 20px;
     background: black;
+    box-shadow: 20px 10px var(--aquamarine), 30px 20px var(--mossgreen);
     color: white;
-    margin: 100px;
-    height: 400px;
+    margin: 100px;  
+    height: 300px;
     border-radius: 30px;
 }   
